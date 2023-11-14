@@ -8,7 +8,7 @@ namespace Skottår_Test
         public void Setup()
         {
         }
-
+        /*
         [Test]
         public void IsLeap_ThrowsNotImplementedException()
         {
@@ -18,11 +18,33 @@ namespace Skottår_Test
             // Act and Assert
             Assert.Throws<NotImplementedException>(() => År.ÄrSkottår(årAttKontrollera));
         }
-
+        */
         [Test]
         public void När_ÅrÄrDelbartMed400_ShouldReturnTrue()
         {
-            Assert.Pass();
+            // Arrange
+            int år = 2000;
+
+            // Act
+            bool result = År.ÄrSkottår(år);
+
+            Assert.IsTrue(result);
+
+        }
+        [Test]
+        public void DelbartMed100MenInteMed400_ÄrSkottår_RetunerarFalse()
+        {
+            // Arrange
+            int år = 1700;
+
+            // Act
+            bool result = År.ÄrSkottår(år);
+
+            // Output
+            Console.WriteLine(result);
+
+            // Assert
+            Assert.IsFalse(result);
         }
     }
 }
