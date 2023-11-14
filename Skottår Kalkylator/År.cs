@@ -20,5 +20,11 @@
 			//throw new NotImplementedException();
 		}
 
+		public static int FåDagNummer(DateTime datum)
+		{
+			return datum.DayOfYear;
+		}
+
+
 	}
 }

@@ -41,9 +41,6 @@ namespace Skottår_Test
             // Act
             bool result = År.ÄrSkottår(år);
 
-            // Output
-            Console.WriteLine(result);
-
             // Assert
             Assert.IsFalse(result);
         }
@@ -68,11 +65,20 @@ namespace Skottår_Test
             // Act
             bool result = År.ÄrSkottår(år);
 
-			// Output
-			Console.WriteLine(result);
-
 			// Assert
 			Assert.IsTrue (result);
+        }
+        [Test]
+        public void FåDagNummer_1Jan2023_Retunerar1()
+        {
+            // Arrange
+            DateTime datum = new DateTime(2023, 1, 1);
+
+            // Act
+            int result = År.FåDagNummer(datum);
+
+            //Assert
+            Assert.AreEqual(1, result);
         }
     }
 }
