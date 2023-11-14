@@ -28,6 +28,7 @@ namespace Skottår_Test
             // Act
             bool result = År.ÄrSkottår(år);
 
+            // Assert
             Assert.IsTrue(result);
 
         }
@@ -45,6 +46,33 @@ namespace Skottår_Test
 
             // Assert
             Assert.IsFalse(result);
+        }
+        [Test]
+        public void DelbartMed4MenInteMed100_ÄrSkottår_RetunerarTrue()
+        {
+            // Arrange
+            int år = 2008;
+
+            // Act
+            bool result = År.ÄrSkottår(år);
+
+            // Assert
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void InteÄrDelbartMed4_ÄrSkottår_RetunerarTrue()
+        {
+            // Arrange
+            int år = 2017;
+
+            // Act
+            bool result = År.ÄrSkottår(år);
+
+			// Output
+			Console.WriteLine(result);
+
+			// Assert
+			Assert.IsTrue (result);
         }
     }
 }
