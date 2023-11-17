@@ -78,7 +78,33 @@ namespace Skottår_Test
             int result = År.FåDagNummer(datum);
 
             //Assert
-            Assert.AreEqual(1, result);
+            Assert.That(result, Is.EqualTo(1));
         }
-    }
+        [Test]
+        public void FåveckaNummer_29Mars2023_RetunerarVecka13()
+        {
+			// Arrange
+			DateTime datum = new DateTime(2023, 3, 29);
+
+			// Act
+			int result = År.FåVeckaNummer(datum);
+
+			// Assert
+			Assert.That(result, Is.EqualTo(13));
+
+		}
+		[Test]
+		public void FåVeckoDag_29Mars2023_RetunerarOnsdag()
+		{
+			// Arrange
+			DateTime datum = new DateTime(2023, 3, 29);
+
+			// Act
+			string result = År.FåVeckoDag(datum);
+
+			// Assert
+			Assert.That(result, Is.EqualTo("onsdag"));
+		}
+
+	}
 }
